@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program156
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Оценка (1–5): ");
+            if (!int.TryParse(Console.ReadLine(), out int grade))
+            {
+                Console.WriteLine("Ошибка: введите целое число.");
+                return;
+            }
+
+            string desc;
+            if (grade == 1)
+                desc = "Очень плохо";
+            else if (grade == 2)
+                desc = "Неудовлетворительно";
+            else if (grade == 3)
+                desc = "Удовлетворительно";
+            else if (grade == 4)
+                desc = "Хорошо";
+            else if (grade == 5)
+                desc = "Отлично";
+            else
+                desc = "Недопустимая оценка.";
+
+            Console.WriteLine(desc);
+        }
+    }
+}
